@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ValuesApiProvider } from '../../providers/values-api/values-api';
 
 /**
  * Generated class for the ValuePage page.
@@ -17,11 +18,12 @@ export class ValuePage {
 
   public items: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private api: ValuesApiProvider) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ValuePage');
+    this.items = this.api.getValues();
   }
 
 }
