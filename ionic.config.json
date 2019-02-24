@@ -1,0 +1,8 @@
+{
+  "name": "DemoSpaIonic3",
+  "app_id": "1d599600",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
